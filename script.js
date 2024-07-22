@@ -27,4 +27,22 @@ function adjustCellSize() {
   });
 }
 
+function promptUserForGridSize() {
+  let gridSizeButton = document.querySelector("#grid-size-btn");
+
+  gridSizeButton.addEventListener("click", () => {
+    let gridSize = prompt("Enter a grid size (1 to 100): ");
+    if (gridSize < 1 || gridSize > 100) {
+      alert("Invalid size.");
+    } else {
+      let gridCells = document.querySelectorAll(".cell");
+      gridCells.forEach((gridCell) =>
+        gridCell.parentNode.removeChild(gridCell)
+      );
+      createGrid(gridSize);
+    }
+  });
+}
+
 createGrid(16);
+promptUserForGridSize();
