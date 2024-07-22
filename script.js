@@ -44,5 +44,16 @@ function promptUserForGridSize() {
   });
 }
 
+function resetGrid() {
+  let resetBtn = document.querySelector("#reset-grid-btn");
+  resetBtn.addEventListener("click", () => {
+    let gridCells = document.querySelectorAll(".cell");
+    gridCells.forEach((gridCell) => {
+      gridCell.style.backgroundColor = "white";
+    });
+  });
+}
+
 createGrid(16);
 promptUserForGridSize();
+resetGrid();

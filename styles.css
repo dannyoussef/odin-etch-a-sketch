@@ -8,6 +8,13 @@ header {
   text-shadow: 1px 1px 2px darkred, 0 0 1em pink, 0 0 0.2em orange;
 }
 
+#grid-size-btn,
+#reset-grid-btn {
+  border-radius: 10px;
+  font-size: larger;
+  margin: 20px 20px 0px 20px;
+}
+
 #container {
   display: flex;
   flex-wrap: wrap;
