@@ -1,0 +1,23 @@
+header {
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  background-color: azure;
+}
+
+.cell {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
