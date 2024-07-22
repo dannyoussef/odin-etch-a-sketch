@@ -12,12 +12,12 @@ header {
   align-items: center;
   justify-content: center;
   width: fit-content;
-  height: 500px;
+  height: fit-content;
   background-color: white;
   margin: auto;
 }
 
 .cell {
-  border: 1px solid black;
+  border: 2px solid black;
   box-sizing: border-box;
 }

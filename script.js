@@ -15,13 +15,16 @@ function createGrid(gridSize) {
       row.appendChild(cell);
     }
   }
+  adjustCellSize();
+}
+
+function adjustCellSize() {
+  let cells = document.querySelectorAll(".cell");
+  cells.forEach((cell) => {
+    cell.addEventListener("mouseover", () => {
+      cell.style.backgroundColor = "black";
+    });
+  });
 }
 
 createGrid(16);
-
-let cells = document.querySelectorAll(".cell");
-cells.forEach((cell) => {
-  cell.addEventListener("mouseover", () => {
-    cell.style.backgroundColor = "black";
-  });
-});
