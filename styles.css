@@ -1,10 +1,9 @@
-header {
-  text-align: center;
+body {
+  background-color: azure;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
+header {
+  text-align: center;
 }
 
 #container {
@@ -12,9 +11,9 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 500px;
+  width: fit-content;
   height: 500px;
-  background-color: azure;
+  background-color: white;
 }
 
 .cell {
