@@ -67,6 +67,19 @@ function rainbowMode() {
   });
 }
 
+function defaultMode() {
+  let defaultModeBtn = document.querySelector("#default-mode-btn");
+
+  defaultModeBtn.addEventListener("click", () => {
+    let cells = document.querySelectorAll(".cell");
+    cells.forEach((cell) => {
+      cell.addEventListener("mouseover", () => {
+        cell.style.backgroundColor = "black";
+      });
+    });
+  });
+}
+
 function getRandomColor() {
   var r = Math.floor(Math.random() * 256); // Random between 0-255
   var g = Math.floor(Math.random() * 256); // Random between 0-255
@@ -78,3 +91,4 @@ createGrid(16);
 promptUserForGridSize();
 resetGrid();
 rainbowMode();
+defaultMode();
