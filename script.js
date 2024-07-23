@@ -15,14 +15,14 @@ function createGrid(gridSize) {
       row.appendChild(cell);
     }
   }
-  adjustCellSize();
+  draw("black");
 }
 
-function adjustCellSize() {
+function draw(color) {
   let cells = document.querySelectorAll(".cell");
   cells.forEach((cell) => {
     cell.addEventListener("mouseover", () => {
-      cell.style.backgroundColor = "black";
+      cell.style.backgroundColor = color;
     });
   });
 }
@@ -54,6 +54,27 @@ function resetGrid() {
   });
 }
 
+function rainbowMode() {
+  let rainbowBtn = document.querySelector("#rainbow-mode-btn");
+
+  rainbowBtn.addEventListener("click", () => {
+    let cells = document.querySelectorAll(".cell");
+    cells.forEach((cell) => {
+      cell.addEventListener("mouseover", () => {
+        cell.style.backgroundColor = getRandomColor();
+      });
+    });
+  });
+}
+
+function getRandomColor() {
+  var r = Math.floor(Math.random() * 256); // Random between 0-255
+  var g = Math.floor(Math.random() * 256); // Random between 0-255
+  var b = Math.floor(Math.random() * 256); // Random between 0-255
+  return "rgb(" + r + "," + g + "," + b + ")";
+}
+
 createGrid(16);
 promptUserForGridSize();
 resetGrid();
+rainbowMode();
