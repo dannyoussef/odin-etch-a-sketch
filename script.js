@@ -1,7 +1,7 @@
 const container = document.querySelector("#container");
 
 function createGrid(gridSize) {
-  let resizedCell = 500 / gridSize;
+  let resizedCell = 600 / gridSize;
 
   for (i = 1; i <= gridSize; i++) {
     let row = container.appendChild(document.createElement("div"));
